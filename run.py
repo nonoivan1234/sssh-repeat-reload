@@ -5,8 +5,8 @@ import time
 
 
 def click(target):
-    ActionChains(edge).move_to_element(target).perform()
-    ActionChains(edge).click(target).perform()
+    ActionChains(driver).move_to_element(target).perform()
+    ActionChains(driver).click(target).perform()
 
 print('run main.py')
 url = 'https://www.sssh.tp.edu.tw/'
