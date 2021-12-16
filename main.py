@@ -1,0 +1,25 @@
+from selenium import webdriver
+from selenium.webdriver.common.action_chains import ActionChains
+import time
+
+
+def click(target):
+    ActionChains(edge).move_to_element(target).perform()
+    ActionChains(edge).click(target).perform()
+
+
+url = 'https://www.sssh.tp.edu.tw/'
+
+driver = webdriver.Chrome(executable_path=os.environ.get("CHROMEDRIVER_PATH"))
+driver.get(url)
+
+time.sleep(2)
+i = 1
+
+while True:
+    btn = driver.find_element('xpath', '//a[@nid="21369"]')
+    click(btn)
+    close = driver.find_element('xpath', '//*[@id="layout"]/div[4]/a')
+    click(close)
+    print(i, 'complete')
+    i += 1
