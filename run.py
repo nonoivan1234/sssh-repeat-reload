@@ -21,10 +21,10 @@ while True:
     try:
         print('progressing', i)
         btn = driver.find_element('xpath', '//a[@nid="21369"]')
-        print('driver find btn', i)
+        # print('driver find btn', i)
         click(btn)
         close = driver.find_element('xpath', '//*[@id="layout"]/div[4]/a')
-        print('driver find close', i)
+        # print('driver find close', i)
         click(close)
         print(i, 'complete')
         i += 1
