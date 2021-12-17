@@ -22,7 +22,6 @@ while True:
         print('progressing', i)
         btn = driver.find_element('xpath', '//a[@nid="21369"]')
         print('driver find btn', i)
-        time.sleep(1)
         click(btn)
         close = driver.find_element('xpath', '//*[@id="layout"]/div[4]/a')
         print('driver find close', i)
